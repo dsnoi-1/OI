@@ -6,7 +6,7 @@ vector<int> g[maxn];
 int del[maxn],out[maxn];
 stack<int> ans;
 void dfs(int s){
-	for(int i=del[s];i<g[s].size();++i){
+	for(int i=del[s];i<g[s].size();i=del[s]){
 		del[s]=i+1;
 		dfs(g[s][i]);
 	}
